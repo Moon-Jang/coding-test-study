@@ -3,6 +3,7 @@ package com.cote.leetcode.dfs;
 import java.util.ArrayList;
 import java.util.List;
 
+// https://leetcode.com/problems/binary-tree-inorder-traversal/description/?envType=problem-list-v2&envId=depth-first-search
 public class BinaryTreeInorderTraversal {
     private final List<Integer> result = new ArrayList<>();
 
@@ -17,17 +18,4 @@ public class BinaryTreeInorderTraversal {
         result.add(node.val);
         if (node.right != null) search(node.right);
     }
-
-  public static class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode() {}
-      TreeNode(int val) { this.val = val; }
-      TreeNode(int val, TreeNode left, TreeNode right) {
-          this.val = val;
-          this.left = left;
-          this.right = right;
-      }
-  }
 }
